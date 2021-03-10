@@ -20,8 +20,12 @@ namespace QuizingFun.ViewModel
 
         public LastPageViewModel()
         {
+             
+             
             scoresDatabase = new ScoresDatabase();
             scoresDatabase.AddScoreToDB(qvm.Score.ToString());
+             
+             
             
             FinalResult = GetFinalScore();
             HighestScore = GetHighScore();
@@ -62,9 +66,9 @@ namespace QuizingFun.ViewModel
             if (qvm.Score > 4)
                 scoreMessage = "Well Done !!!";
             else if (qvm.Score>2  && qvm.Score < 5)
-                scoreMessage = "Nice ...You did well ! ";
+                scoreMessage = "Great ...You did well ! ";
             else if (qvm.Score < 3 )
-                scoreMessage = "Hmmm... Better luck next time ! ";
+                scoreMessage = "Oops... Better luck next time ! ";
             return scoreMessage;
         }
     }
