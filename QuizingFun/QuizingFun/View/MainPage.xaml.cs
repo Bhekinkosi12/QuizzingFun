@@ -21,7 +21,9 @@ namespace QuizingFun
     public partial class MainPage : ContentPage
     {
         QuizQuestionList quizQuestionList = new QuizQuestionList();
-        string jsonURI = "https://my-json-server.typicode.com/Rthom82/mockJson/db";
+        string jsonURI = "https://my-json-server.typicode.com/Rthom82/mockJson/db3";
+        
+        
 
         public MainPage()
         {
@@ -29,10 +31,10 @@ namespace QuizingFun
             GetJsonData(); 
         }
 
+
         /*When the start button is clicked it loads Page1 which contains the Quiz questions*/
         private async void Start_Button_Clicked(object sender, EventArgs e)
         {
-           
             await Navigation.PushAsync(new Page1());
         }
 
